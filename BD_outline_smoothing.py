@@ -12,15 +12,15 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import function_smoothing as fs
 
-# Function: Calculate and set the window to be centered
+# Function: Calculate and center the window
 def center_window(window):
-    window.update_idletasks()    # Update window size and layout
+    window.update_idletasks()  # Update the size and layout of the window
     width = window.winfo_width()
     height = window.winfo_height()
     screen_width = window.winfo_screenwidth()
     screen_height = window.winfo_screenheight()
-    x = int((screen_width/2) - (width/0.4))
-    y = int((screen_height/2) - (height/0.5))
+    x = int((screen_width - width) / 2)
+    y = int((screen_height - height) / 2)
     window.geometry(f'+{x}+{y}')
     
 class DataSmoothingApp:
@@ -136,6 +136,7 @@ class DataSmoothingApp:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    root.geometry("940x820")
     # Ensure the window is centered
     center_window(root)
     app = DataSmoothingApp(root)
