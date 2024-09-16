@@ -10,3 +10,5 @@ Smoothing an enclosed outline can be challenging with common smoothing methods. 
 3. **Smooth Seamlessly**: To avoid "seams" in the outline, the beginning and end points are specifically smoothed using an adjacent average method.
 4. **Convert Back to Cartesian**: The smoothed polar data is then converted back to Cartesian coordinates, resulting in a smoothly enclosed outline.
 
+## How to Download
+Download the latest version from the [Releases](https://github.com/MaximeMET/BD-Outline-Smoothing/releases) section on GitHub.
